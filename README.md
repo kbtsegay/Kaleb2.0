@@ -3,5 +3,6 @@ A powerful conversational AI capable of answering interview-like questions about
 Building a PyTorch model using:
 - BERT for question classification,
 - GPT-2 for answer generation,
-- and Rasa for dialogue management 
+- and Rasa for dialogue management
+
 all in conjunction.
