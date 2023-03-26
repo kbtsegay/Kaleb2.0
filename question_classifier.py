@@ -102,10 +102,10 @@ if __name__ == "__main__":
         df_train, df_val, df_test = np.split(df.sample(frac=1, random_state=42), [int(.8*len(df)), int(.9*len(df))])
         model = QuestionClassifier()
         train(model, df_train, df_val)
-        pickle.dump(model, open('Kaleb2.0', 'wb'))
+        pickle.dump(model, open('Kaleb2.0_classifier', 'wb'))
     elif sys.argv[1] == '--eval':
         tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-        model = pickle.load(open('Kaleb2.0', 'rb'))
+        model = pickle.load(open('Kaleb2.0_classifier', 'rb'))
         cont = True
         while(cont):
             question = input("Ask a question you'd like to classify: ")
